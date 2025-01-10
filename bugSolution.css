@@ -1,0 +1,22 @@
+To solve this, ensure the parent element has its width explicitly defined. Then, adjust the calculation within the nested element to use absolute units (like pixels) instead of percentages to avoid issues. 
+
+Here's an example:
+```css
+/* bug.css */
+.parent {
+  width: 50%; /* Explicitly set parent width */
+}
+
+.child {
+  width: calc(50% - 10px); /* will not calculate correctly */
+}
+
+/* bugSolution.css */
+.parent {
+  width: 500px; /* Explicit width for parent */
+}
+
+.child {
+  width: calc(250px - 10px); /* Use pixels for accurate calculation */
+}
+```
