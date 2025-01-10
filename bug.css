@@ -1,0 +1,1 @@
+The CSS property `calc()` is not working as expected when used with percentage values within nested elements. For example, a div with width: `calc(50% - 10px)` inside another div with a width less than 100% will not be correctly sized.
